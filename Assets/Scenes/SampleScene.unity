@@ -401,6 +401,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1016362923}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: IncreaseColorParameterR
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 899345980}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: IncreaseColorParameterR
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 803157799}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: IncreaseColorParameterR
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &84195763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,7 +683,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474883225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -658,7 +694,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 87.20996, y: 258.42004}
-  m_SizeDelta: {x: 172.43, y: -516.85}
+  m_SizeDelta: {x: 172.43, y: -516.84985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474883227
 MonoBehaviour:
@@ -766,9 +802,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8686547c190f54198161ec0857c8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsSelected: 0
+  items:
+  - {fileID: 803157795}
+  - {fileID: 899345978}
+  - {fileID: 1016362921}
   OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 474883230}
+        m_TargetAssemblyTypeName: ChangeColor.ItemOutliner, Assembly-CSharp
+        m_MethodName: UnselectElements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &474883231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,6 +837,7 @@ MonoBehaviour:
   _rValue: {fileID: 2043788203}
   _gValue: {fileID: 1549997272}
   _bValue: {fileID: 1655864850}
+  _slider: {fileID: 1594219189}
 --- !u!1 &580552748
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +923,42 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 474883231}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: DecreaseColorParameterR
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1016362923}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: DecreaseColorParameterR
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 899345980}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: DecreaseColorParameterR
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 803157799}
         m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
         m_MethodName: DecreaseColorParameterR
         m_Mode: 3
@@ -1399,9 +1489,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8686547c190f54198161ec0857c8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsSelected: 0
+  items:
+  - {fileID: 474883230}
+  - {fileID: 899345978}
+  - {fileID: 1016362921}
   OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 803157795}
+        m_TargetAssemblyTypeName: ChangeColor.ItemOutliner, Assembly-CSharp
+        m_MethodName: UnselectElements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &803157797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1445,6 +1552,7 @@ MonoBehaviour:
   _rValue: {fileID: 2043788203}
   _gValue: {fileID: 1549997272}
   _bValue: {fileID: 1655864850}
+  _slider: {fileID: 1594219189}
 --- !u!1 &888866821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1657,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899345974}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1559,7 +1667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -439.82, y: 562.9}
+  m_AnchoredPosition: {x: -439.82, y: 562.89996}
   m_SizeDelta: {x: 198.38, y: 92.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899345976
@@ -1612,9 +1720,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8686547c190f54198161ec0857c8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsSelected: 0
+  items:
+  - {fileID: 474883230}
+  - {fileID: 803157795}
+  - {fileID: 1016362921}
   OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 899345978}
+        m_TargetAssemblyTypeName: ChangeColor.ItemOutliner, Assembly-CSharp
+        m_MethodName: UnselectElements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &899345979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,6 +1811,7 @@ MonoBehaviour:
   _rValue: {fileID: 2043788203}
   _gValue: {fileID: 1549997272}
   _bValue: {fileID: 1655864850}
+  _slider: {fileID: 1594219189}
 --- !u!1 &903091446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,7 +2195,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016362917}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2079,7 +2205,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -210.21002, y: -87.94995}
+  m_AnchoredPosition: {x: -210.21002, y: -87.95001}
   m_SizeDelta: {x: 420.42004, y: 175.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016362919
@@ -2132,9 +2258,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8686547c190f54198161ec0857c8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsSelected: 0
+  items:
+  - {fileID: 474883230}
+  - {fileID: 899345978}
+  - {fileID: 803157795}
   OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1016362921}
+        m_TargetAssemblyTypeName: ChangeColor.ItemOutliner, Assembly-CSharp
+        m_MethodName: UnselectElements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1016362922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2206,6 +2349,7 @@ MonoBehaviour:
   _rValue: {fileID: 2043788203}
   _gValue: {fileID: 1549997272}
   _bValue: {fileID: 1655864850}
+  _slider: {fileID: 1594219189}
 --- !u!1 &1082491734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,7 +2433,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1082491737}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 474883231}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: SetRandomColorParameterB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1016362923}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: SetRandomColorParameterB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 899345980}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: SetRandomColorParameterB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 803157799}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: SetRandomColorParameterB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1082491737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2785,12 +2977,60 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2117265689}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
+  m_MaxValue: 255
+  m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 474883231}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: ChangeColorParameterG
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1016362923}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: ChangeColorParameterG
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 899345980}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: ChangeColorParameterG
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 803157799}
+        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_MethodName: ChangeColorParameterG
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1655864849
 GameObject:
   m_ObjectHideFlags: 0
