@@ -390,8 +390,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 474883231}
-        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
-        m_MethodName: IncreaseColorParameterR
+        m_TargetAssemblyTypeName: ChangeColor.UIElementsColorChanger, Assembly-CSharp
+        m_MethodName: AddValueToParameterR
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -402,8 +402,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1016362923}
-        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
-        m_MethodName: IncreaseColorParameterR
+        m_TargetAssemblyTypeName: ChangeColor.UIElementsColorChanger, Assembly-CSharp
+        m_MethodName: AddValueToParameterR
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -414,8 +414,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 899345980}
-        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
-        m_MethodName: IncreaseColorParameterR
+        m_TargetAssemblyTypeName: ChangeColor.UIElementsColorChanger, Assembly-CSharp
+        m_MethodName: AddValueToParameterR
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -426,8 +426,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 803157799}
-        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
-        m_MethodName: IncreaseColorParameterR
+        m_TargetAssemblyTypeName: ChangeColor.SceneObjectsColorChanger, Assembly-CSharp
+        m_MethodName: AddValueToParameterR
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -709,7 +709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.078431375, g: 0.49019608, b: 0.49019608, a: 1}
+  m_Color: {r: 0.105882354, g: 0.49019608, b: 0.49019608, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 474883225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172d014605c8b4c4791627f44f4dc32a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0939b45d633dc864c904cc2d5e61eb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _rValue: {fileID: 2043788203}
@@ -923,49 +923,49 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 474883231}
-        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
-        m_MethodName: DecreaseColorParameterR
+        m_TargetAssemblyTypeName: ChangeColor.UIElementsColorChanger, Assembly-CSharp
+        m_MethodName: AddValueToParameterR
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: -10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1016362923}
-        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
-        m_MethodName: DecreaseColorParameterR
+        m_TargetAssemblyTypeName: ChangeColor.UIElementsColorChanger, Assembly-CSharp
+        m_MethodName: AddValueToParameterR
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: -10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 899345980}
-        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
-        m_MethodName: DecreaseColorParameterR
+        m_TargetAssemblyTypeName: ChangeColor.UIElementsColorChanger, Assembly-CSharp
+        m_MethodName: AddValueToParameterR
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: -10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 803157799}
-        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
-        m_MethodName: DecreaseColorParameterR
+        m_TargetAssemblyTypeName: ChangeColor.SceneObjectsColorChanger, Assembly-CSharp
+        m_MethodName: AddValueToParameterR
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: -10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 803157790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172d014605c8b4c4791627f44f4dc32a, type: 3}
+  m_Script: {fileID: 11500000, guid: 98f71b8d4aadc6544b10279a90af9b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _rValue: {fileID: 2043788203}
@@ -1643,6 +1643,8 @@ GameObject:
   - component: {fileID: 899345978}
   - component: {fileID: 899345979}
   - component: {fileID: 899345980}
+  - component: {fileID: 899345981}
+  - component: {fileID: 899345982}
   m_Layer: 5
   m_Name: ElementMove
   m_TagString: Untagged
@@ -1805,13 +1807,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 899345974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172d014605c8b4c4791627f44f4dc32a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0939b45d633dc864c904cc2d5e61eb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _rValue: {fileID: 2043788203}
   _gValue: {fileID: 1549997272}
   _bValue: {fileID: 1655864850}
   _slider: {fileID: 1594219189}
+--- !u!111 &899345981
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899345974}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 69395da1f702c2e46ae8deb80fa759ee, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 26a2c663d8a271e4c8604a2b708ec3ff, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &899345982
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899345974}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &903091446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2205,7 +2243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -210.21002, y: -87.95001}
+  m_AnchoredPosition: {x: -210.21002, y: -87.94995}
   m_SizeDelta: {x: 420.42004, y: 175.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016362919
@@ -2343,7 +2381,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1016362917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172d014605c8b4c4791627f44f4dc32a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0939b45d633dc864c904cc2d5e61eb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _rValue: {fileID: 2043788203}
@@ -2471,7 +2509,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 803157799}
-        m_TargetAssemblyTypeName: ChangeColor.ColorChanger, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChangeColor.SceneObjectsColorChanger, Assembly-CSharp
         m_MethodName: SetRandomColorParameterB
         m_Mode: 1
         m_Arguments:

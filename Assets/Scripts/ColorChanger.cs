@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 namespace ChangeColor
 {
-    public class ColorChanger : MonoBehaviour
+    public abstract class ColorChanger : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _rValue;
-        [SerializeField] private TMP_Text _gValue;
-        [SerializeField] private TMP_Text _bValue;
-        [SerializeField] private Slider _slider;
-        private Color _color;
-        private ItemOutliner _item;
+        [SerializeField] protected TMP_Text _rValue;
+        [SerializeField] protected TMP_Text _gValue;
+        [SerializeField] protected TMP_Text _bValue;
+        [SerializeField] protected Slider _slider;
+        protected Color _color;
+        protected ItemOutliner _item;
 
         private void Start() 
         {
@@ -30,85 +30,29 @@ namespace ChangeColor
             GetComponent<ItemOutliner>().OnSelect.RemoveListener(SetColorValuesText);
         }
 
-         private void SetColorValuesText()
+        protected void SetText()
         {
-            if (GetComponent<Image>()!=null)
-                _color = GetComponent<Image>().color;
-            else
-                _color = gameObject.GetComponent<MeshRenderer>().material.color;
             _slider.value = Mathf.Round(_color.g*255);
             _rValue.text = Mathf.Round(_color.r*255).ToString();
             _gValue.text = Mathf.Round(_color.g*255).ToString();
             _bValue.text = Mathf.Round(_color.b*255).ToString();
         }
-        //оставить только этот метод, сделать значение валуе + и -, правда хз что делать с проверками на 255 и 0
-        private void AddValueToParameterR(int value)
-        {
-            if (!_item.IsSelected) return;
-            if (GetComponent<Image>()!=null)
-                _color = GetComponent<Image>().color;
-            else
-                _color = gameObject.GetComponent<MeshRenderer>().material.color;
-            var R =(double.Parse(_rValue.text)+value);
-            _color.r = (float)R/255;
-            if (GetComponent<Image>()!=null)
-                GetComponent<Image>().color = _color;
-            else
-                gameObject.GetComponent<MeshRenderer>().material.color = _color;
-        }
 
-        public void IncreaseColorParameterR(int value)
+        protected void CorrectRText(float R)
         {
-            if (!_item.IsSelected) return;
-            AddValueToParameterR(value);
             var rValue = Mathf.Round(_color.r*255);
-            if (rValue<=255)
+            if (R<=255 && R>=0)
                 _rValue.text = rValue.ToString();
-            else 
-                _rValue.text = "255";
+            else if (R<0) _rValue.text = "0";
+                else _rValue.text = "255";
         }
 
-        public void DecreaseColorParameterR(int value)
-        {
-            if (!_item.IsSelected) return;
-            AddValueToParameterR(-value);
-            var rValue = Mathf.Round(_color.r*255);
-            if (rValue>=0)
-                _rValue.text = rValue.ToString();
-            else 
-                _rValue.text = "0";
-        }
+        protected abstract void SetColorValuesText();
+        
+        public abstract void AddValueToParameterR(int value);
 
-        public void ChangeColorParameterG()
-        {
-            if (!_item.IsSelected) return;
-            if (GetComponent<Image>()!=null)
-                _color = GetComponent<Image>().color;
-            else 
-                _color = gameObject.GetComponent<MeshRenderer>().material.color;
-            var G = _slider.value;
-            _color.g = (float)G/255;
-            if (GetComponent<Image>()!=null)
-                GetComponent<Image>().color = _color;
-            else 
-                gameObject.GetComponent<MeshRenderer>().material.color = _color;
-            _gValue.text=Mathf.Round(G).ToString();
-        }
+        public abstract void ChangeColorParameterG();
 
-        public void SetRandomColorParameterB()
-        {
-            if (!_item.IsSelected) return;
-            if (GetComponent<Image>()!=null)
-                _color = GetComponent<Image>().color;
-            else
-                _color = gameObject.GetComponent<MeshRenderer>().material.color;
-            var B = Random.Range(0,255);
-            _color.b = (float)B/255;
-             if (GetComponent<Image>()!=null)
-                GetComponent<Image>().color = _color;
-            else
-                gameObject.GetComponent<MeshRenderer>().material.color = _color;
-            _bValue.text=Mathf.Round(B).ToString();
-        }
+        public abstract void SetRandomColorParameterB();
     }
 }
