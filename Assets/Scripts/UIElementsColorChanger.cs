@@ -17,14 +17,12 @@ namespace ChangeColor
         public override void AddValueToParameterR(int value)
         {
             if (!_item.IsSelected) return;
-
             _color = GetComponent<Image>().color;
             var R =(float.Parse(_rValue.text)+value);
             _color.r = (float)R/255;
             GetComponent<Image>().color = _color;
             CorrectRText(R);
         }
-
 
         public override void ChangeColorParameterG()
         {

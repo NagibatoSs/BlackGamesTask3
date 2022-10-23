@@ -6,6 +6,7 @@ namespace ChangeColor
 {
     public class SceneObjectsColorChanger : ColorChanger
     {
+
         protected override void SetColorValuesText()
         {
             _color = gameObject.GetComponent<MeshRenderer>().material.color;

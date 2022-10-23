@@ -14,11 +14,8 @@ namespace ChangeColor
         [SerializeField] protected Slider _slider;
         protected Color _color;
         protected ItemOutliner _item;
-
-        private void Start() 
-        {
-            _item = GetComponent<ItemOutliner>();
-        }
+        protected bool _isChanging=false;
+        protected int _changingR;
 
         private void OnEnable() 
         {
@@ -28,6 +25,28 @@ namespace ChangeColor
         private void OnDisable() 
         {
             GetComponent<ItemOutliner>().OnSelect.RemoveListener(SetColorValuesText);
+        }
+
+        private void Start() 
+        {
+            _item = GetComponent<ItemOutliner>();
+        }
+
+        private void Update() 
+        {
+            if (_isChanging)
+                AddValueToParameterR(_changingR);
+        }
+
+        public void PressButtonChangeR(int R)
+        {
+            if (R!=0)
+            {
+                _changingR = R;
+                _isChanging = true;
+            }
+            else 
+                _isChanging = false;
         }
 
         protected void SetText()
