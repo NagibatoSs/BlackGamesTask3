@@ -16,6 +16,8 @@ namespace ChangeColor
         protected ItemOutliner _item;
         protected bool _isChanging=false;
         protected int _changingR;
+        protected float _timeLeft;
+        protected float _activationDelay=0.15f;
 
         private void OnEnable() 
         {
@@ -35,18 +37,28 @@ namespace ChangeColor
         private void Update() 
         {
             if (_isChanging)
-                AddValueToParameterR(_changingR);
+            {
+                _timeLeft += Time.deltaTime;
+                if (_timeLeft >= _activationDelay)
+                {
+                    _timeLeft = 0;
+                    AddValueToParameterR(_changingR);
+                }
+            }
         }
 
         public void PressButtonChangeR(int R)
-        {
+        {   
             if (R!=0)
             {
                 _changingR = R;
                 _isChanging = true;
             }
             else 
+            {   
+                _timeLeft = 0;
                 _isChanging = false;
+            }
         }
 
         protected void SetText()
