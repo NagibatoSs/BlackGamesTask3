@@ -11,8 +11,6 @@ namespace ChangeColor
     {
         [HideInInspector] public bool IsSelected=false;
         public ItemOutliner[] items;
-       // UnityEvent OnSelect сделать отмену селекта других  
-       //и добавить какое то выделение выбранного
         public UnityEvent OnSelect;
         [SerializeField] private GameObject _selectedVFXPrefab;
         private GameObject _vfx;
@@ -20,23 +18,17 @@ namespace ChangeColor
         public void SelectItem() 
         {
             OnSelect.Invoke();
-            IsSelected=true;
-            _vfx = Instantiate(_selectedVFXPrefab,transform.position,Quaternion.identity);
-            _vfx.transform.parent = transform;
-            _vfx.transform.position+= new Vector3(0,0,-1);
-            _vfx.transform.localScale = new Vector3(5,5,5);
-            Debug.Log(this.gameObject.name+" selected");
+            if (!IsSelected)
+            {
+                IsSelected=true;
+                _vfx = Instantiate(_selectedVFXPrefab,transform.position,Quaternion.identity);
+                DoSelectVFX();
+            }
         }
 
         private void OnMouseDown() 
         {
-            OnSelect.Invoke();
-            IsSelected=true;
-            _vfx = Instantiate(_selectedVFXPrefab,transform.position,Quaternion.identity);
-            _vfx.transform.parent = transform;
-            _vfx.transform.position+= new Vector3(0,0,-1);
-            _vfx.transform.localScale = new Vector3(5,5,5);
-            Debug.Log(this.gameObject.name+" selected");
+            SelectItem();
         }
 
         public void UnselectElements()
@@ -45,8 +37,14 @@ namespace ChangeColor
             {
                 item.IsSelected=false;
                 Destroy(item._vfx);
-                Debug.Log(item.gameObject.name+" unselected");
             }
+        }
+
+        private void DoSelectVFX()
+        {
+            _vfx.transform.parent = transform;
+            _vfx.transform.position+= new Vector3(0,0,-1);
+            _vfx.transform.localScale = new Vector3(5,5,5);
         }
     }
 }

@@ -19,6 +19,10 @@ namespace ChangeColor
         protected float _timeLeft;
         protected float _activationDelay=0.15f;
 
+        public abstract void SetColorValue(Color _color);
+
+        public abstract Color GetColorValue();
+
         private void OnEnable() 
         {
             GetComponent<ItemOutliner>().OnSelect.AddListener(SetColorValuesText);
@@ -78,12 +82,43 @@ namespace ChangeColor
                 else _rValue.text = "255";
         }
 
-        protected abstract void SetColorValuesText();
-        
-        public abstract void AddValueToParameterR(int value);
+        protected void SetColorValuesText()
+        {
+            _color = GetColorValue();
+            SetText();
+        }
 
-        public abstract void ChangeColorParameterG();
+        public void AddValueToParameterR(int value)
+        {
+            if (!_item.IsSelected) return;
 
-        public abstract void SetRandomColorParameterB();
+            _color = GetColorValue();
+            var R =(float.Parse(_rValue.text)+value);
+            _color.r = (float)R/255;
+            SetColorValue(_color);
+            CorrectRText(R);
+        }
+
+        public void ChangeColorParameterG()
+        {
+            if (!_item.IsSelected) return;
+
+            _color = GetColorValue();
+            var G = _slider.value;
+            _color.g = (float)G/255;
+            SetColorValue(_color);
+            _gValue.text=Mathf.Round(G).ToString();
+        }
+
+        public void SetRandomColorParameterB()
+        {
+            if (!_item.IsSelected) return;
+            
+            _color = GetColorValue();
+            var B = Random.Range(0,255);
+            _color.b = (float)B/255;
+            SetColorValue(_color);
+            _bValue.text=Mathf.Round(B).ToString();
+        }
     }
 }
